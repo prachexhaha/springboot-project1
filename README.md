@@ -14,3 +14,11 @@ changing of the server port :
     if a param is not passed while testing then you will get a 404 bad request error, so it is better to put the required field as false. so incase a param is not passed also, it will return whatever is there in the function.
 
 without parameter -> 404 bad request
+
+
+for some reason it works without the Autowired annotation
+
+
+usually you inject dependency into a constuctor(need to study this in more depth)
+
+For we need to JPA entity
