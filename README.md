@@ -22,3 +22,15 @@ for some reason it works without the Autowired annotation
 usually you inject dependency into a constuctor(need to study this in more depth)
 
 For we need to JPA entity
+
+entity class is required to make with the table
+repo class is required for performing CRUD operations
+
+and for the different layers, you ideally need to make packages that is, make folders.
+
+under application.properties the datasource.url should have port 3306 and the name of the database.
+
+if under the entity code, you do not provide a name to the table then, it picks up the class name by default
+
+flow is like : 
+controller ->service layer (where the implementation happens), here you will inject the repo so that the CRUD operations happen.
