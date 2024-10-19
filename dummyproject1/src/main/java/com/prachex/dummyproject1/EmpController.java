@@ -3,9 +3,10 @@ package com.prachex.dummyproject1;
 //import java.util.ArrayList;
 import java.util.List;
 
-//import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,7 +28,7 @@ public class EmpController
 
     // if we do not to use the new keyword
     // then simply a dependency injection can be down 
-    //@Autowired
+    @Autowired
     EmpService employeeService;
 
 
@@ -36,6 +37,12 @@ public class EmpController
     public List<Employee> getAllEmployees(@RequestParam(required = false) String param)
     {
         return employeeService.readEmployees();
+    }
+
+    @GetMapping("employees/{id}")
+    public Employee getByEmployees(@PathVariable Long id)
+    {
+        return employeeService.readEmployee(id);
     }
 
     @PostMapping("employees")
@@ -53,6 +60,14 @@ public class EmpController
         }
         return "Not found";
     }
+
+    @PutMapping("employees/{id}")
+    public String putEmployee (@PathVariable Long id, @RequestBody Employee employee)
+    {
+        return employeeService.updateEmployee(id,employee);
+    }
+
+
     
 
 

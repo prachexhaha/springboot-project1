@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Dummyproject1Application<dummyproject1>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.prachex.dummyproject1.Dummyproject1Application",
+            "projectName": "dummyproject1",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

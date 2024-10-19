@@ -14,6 +14,7 @@ import lombok.Data;
 
 public class EmpEntity 
 {
+    //these are all columns in the table
     //auto generating primary key
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
